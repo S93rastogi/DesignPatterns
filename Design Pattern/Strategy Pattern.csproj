@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BB2F20D5-E5A7-42D9-A8CD-8385AC118A2B}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Design_Pattern</RootNamespace>
     <AssemblyName>Design Pattern</AssemblyName>
@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,7 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DisplayFakeStrategy.cs" />
+    <Compile Include="DisplayRealStrategy.cs" />
+    <Compile Include="Duck.cs" />
+    <Compile Include="DuckClient.cs" />
+    <Compile Include="HighHeightFlyStrategy.cs" />
+    <Compile Include="IDisplayStrategy.cs" />
+    <Compile Include="IFlyStrategy.cs" />
+    <Compile Include="LowHeightFlyStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
